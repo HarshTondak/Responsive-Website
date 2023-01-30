@@ -1,0 +1,124 @@
+body{
+    background-color: lightgray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Global View aka Desktop View */
+.header-container{
+    background-color: gray;
+    min-height: 100px;
+    margin: 0 auto;
+
+    /* To make the navigation bar fixed while scrolling */
+    position: fixed;
+    width: 100%;
+}
+
+header{
+    max-width: 1024px;
+    background-color: rgb(55, 55, 55);
+    color: antiquewhite;
+    /* font-size: 1.5rem; */
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbutton a {
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 1px solid whitesmoke;
+    margin-left: 20px;
+}
+
+.highlight{
+    font-weight: bold;
+    color: mediumpurple;
+    font-size: 2rem;
+}
+
+.container{
+    min-height: 720px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+/* h1{
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+
+.col img{
+    height: auto;
+    width: 100%;
+}
+
+.col{
+    background-color: burlywood;
+    min-height: 240px;
+    width: 30%;
+    margin: 40px 0;
+}
+
+.col p{
+    color: brown;
+    font-size: 1rem;
+    padding: 10px 25px;
+    line-height: 1.25rem; 
+}
+
+.col p::first-line{
+    font-weight: bold;
+}
+
+.hide-desktop-only{
+    display: none;
+}
+
+
+
+/* Tablet view */
+@media (max-width: 720px){
+    .col{
+        width: 45%;
+    }
+    .hide-desktop-only{
+        display: block;
+    }
+    header{
+        display: block;
+    }
+    .logo{
+        padding: 15px 0;
+    }
+    /* .navbutton{
+        padding-top: 15px;
+    } */
+}
+
+
+
+/* Mobile View */
+@media (max-width: 400px){
+    .col{
+        width: 100%;
+    }
+    .hide-mobile-only{
+        display: none;
+    }
+    .navbutton a{
+        display: block;
+        margin-left: 0px;
+    }
+    .container{
+        padding-top: 150px;
+    }
+}
